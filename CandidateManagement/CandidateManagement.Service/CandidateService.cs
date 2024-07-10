@@ -46,13 +46,16 @@ namespace CandidateManagement.Service
         ///</summary>
         public Candidate CorrectTimes(Candidate candidate)
         {
+            
             if (candidate.CallAvailabilityEnd != null && candidate.CallAvailabilityStart != null)
             {
-                if (candidate.CallAvailabilityEnd < candidate.CallAvailabilityStart)
+                TimeSpan startTime = TimeSpan.Parse(candidate.CallAvailabilityStart);
+                TimeSpan endTime = TimeSpan.Parse(candidate.CallAvailabilityEnd);
+                if (endTime < startTime)
                 {
-                    TimeSpan endTime = (TimeSpan)candidate.CallAvailabilityStart;
+                    string endTimeString =candidate.CallAvailabilityStart;
                     candidate.CallAvailabilityStart = candidate.CallAvailabilityEnd;
-                    candidate.CallAvailabilityEnd = endTime;
+                    candidate.CallAvailabilityEnd = endTimeString;
                 }
             }
             return candidate;

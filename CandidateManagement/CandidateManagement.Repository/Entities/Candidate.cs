@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CandidateManagement.Repository.ValidationAttributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -21,9 +22,12 @@ namespace CandidateManagement.Repository.Entities
 
         public string? PhoneNumber { get; set; }
 
-        public TimeSpan? CallAvailabilityStart { get; set; }
 
-        public TimeSpan? CallAvailabilityEnd { get; set; }
+        [Time(ErrorMessage = "Invalid time format.")]
+        public string? CallAvailabilityStart { get; set; }
+
+        [Time(ErrorMessage = "Invalid time format.")]
+        public string? CallAvailabilityEnd { get; set; }
 
         public string? LinkedInUrl { get; set; }
 
