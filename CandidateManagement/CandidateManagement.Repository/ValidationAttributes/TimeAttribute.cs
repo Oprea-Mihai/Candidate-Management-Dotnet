@@ -10,7 +10,7 @@ namespace CandidateManagement.Repository.ValidationAttributes
     public class TimeAttribute : ValidationAttribute
     {
         public override bool IsValid(object? value)
-        {
+        {if (value == null) return true;
             string timeString;
             if (value is not string)
                 return false;
