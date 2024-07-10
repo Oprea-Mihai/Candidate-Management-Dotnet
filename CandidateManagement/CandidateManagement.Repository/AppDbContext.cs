@@ -10,7 +10,7 @@ namespace CandidateManagement.Repository
 {
     public class AppDbContext : DbContext
     {
-        public DbSet<Candidate> Candidates { get; set; }
+        public DbSet<Candidate> Candidates =>Set<Candidate>();
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {

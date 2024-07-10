@@ -1,5 +1,6 @@
 ﻿using CandidateManagement.Repository.Entities;
 using CandidateManagement.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace CandidateManagement.Repository.Repository
 
         public async Task<Candidate?> GetCandidateByEmailAsync(string email)
         {
-            Candidate? candidate = _context.Candidates.SingleOrDefault(c => c.Email == email);
+            Candidate? candidate =  await _context.Candidates.SingleOrDefaultAsync(c => c.Email == email);
             return candidate;
         }
 

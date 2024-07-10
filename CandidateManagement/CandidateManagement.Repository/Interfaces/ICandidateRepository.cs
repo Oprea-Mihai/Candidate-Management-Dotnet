@@ -9,6 +9,6 @@ namespace CandidateManagement.Repository.Interfaces
 {
     public interface ICandidateRepository : IBaseRepository<Candidate>
     {
-        Task<Candidate> GetCandidateByEmailAsync(string email);
+        Task<Candidate?> GetCandidateByEmailAsync(string email);
     }
 }
