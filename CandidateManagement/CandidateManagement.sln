@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandidateManagement.Reposit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandidateManagement.Service", "CandidateManagement.Service\CandidateManagement.Service.csproj", "{EF50F379-731E-4BE5-B0B8-2EA6C6D06A97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandidateManagement.Tests", "CandidateManagement.Tests\CandidateManagement.Tests.csproj", "{3BD1E750-604F-46C2-9B82-C7A100E6EDE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandidateManagement.Tests", "CandidateManagement.Tests\CandidateManagement.Tests.csproj", "{E137EE9A-57AC-4FF0-8436-FC71F04EF148}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{EF50F379-731E-4BE5-B0B8-2EA6C6D06A97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF50F379-731E-4BE5-B0B8-2EA6C6D06A97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF50F379-731E-4BE5-B0B8-2EA6C6D06A97}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3BD1E750-604F-46C2-9B82-C7A100E6EDE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3BD1E750-604F-46C2-9B82-C7A100E6EDE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3BD1E750-604F-46C2-9B82-C7A100E6EDE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3BD1E750-604F-46C2-9B82-C7A100E6EDE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E137EE9A-57AC-4FF0-8436-FC71F04EF148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E137EE9A-57AC-4FF0-8436-FC71F04EF148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E137EE9A-57AC-4FF0-8436-FC71F04EF148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E137EE9A-57AC-4FF0-8436-FC71F04EF148}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
