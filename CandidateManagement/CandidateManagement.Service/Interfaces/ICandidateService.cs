@@ -5,5 +5,6 @@ namespace CandidateManagement.Service.Interfaces
     public interface ICandidateService
     {
         Task AddOrUpdateCandidateAsync(Candidate candidate);
+        Candidate CorrectTimes(Candidate candidate);
     }
 }
