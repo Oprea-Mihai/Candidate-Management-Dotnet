@@ -12,6 +12,10 @@ namespace CandidateManagement.Service
     public class CandidateService : ICandidateService
     {
         private readonly IUnitOfWork _unitOfWork;
+        public CandidateService(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
         public async Task AddOrUpdateCandidateAsync(Candidate candidate)
         {
             candidate = CorrectTimes(candidate);

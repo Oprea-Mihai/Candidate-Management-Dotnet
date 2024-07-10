@@ -1,6 +1,7 @@
 using CandidateManagement.Repository;
 using CandidateManagement.Repository.Interfaces;
 using CandidateManagement.Repository.Repository;
+using CandidateManagement.Service;
 using CandidateManagement.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -15,7 +16,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped<ICandidateService,ICandidateService>();
+builder.Services.AddScoped<ICandidateService,CandidateService>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
