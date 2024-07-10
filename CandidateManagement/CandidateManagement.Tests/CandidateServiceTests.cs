@@ -87,22 +87,15 @@ namespace CandidateManagement.Tests
         public void CorrectTimes_SwapsTimes_WhenEndIsBeforeStart()
         {
             // Arrange
-            Candidate wrongCandidate = new Candidate
-            {
-                Email = "existingcandidate@email.com",
-                FirstName = "Mike",
-                LastName = "LastName",
-                FreeTextComment = "Updated comment",
-                CallAvailabilityStart = "17:00",
-                CallAvailabilityEnd = "09:00"
-            };
+            candidate.CallAvailabilityStart = "22:00";
+            candidate.CallAvailabilityEnd = "08:00";
 
             // Act
-            Candidate correctedCandidate = _candidateService.CorrectTimes(wrongCandidate);
+            Candidate correctedCandidate = _candidateService.CorrectTimes(candidate);
 
             // Assert
-            Assert.That(correctedCandidate.CallAvailabilityStart, Is.EqualTo("09:00"));
-            Assert.That(correctedCandidate.CallAvailabilityEnd, Is.EqualTo("17:00"));
+            Assert.That(correctedCandidate.CallAvailabilityStart, Is.EqualTo("08:00"));
+            Assert.That(correctedCandidate.CallAvailabilityEnd, Is.EqualTo("22:00"));
         }
 
         [Test]
